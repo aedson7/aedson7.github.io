@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #F3F5FC;
+}
+
+.texto{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+
+    border: none;
+
+    font-family:"Inter";
+    font-style: normal;
+    font-weight:400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc; 
+}
+.texto::placeholder{
+    color: #0A3871;
+}
+.texto:focus, .texto:active{
+    border: none;
+    outline: none;
+}
+
+.terminos{
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+}
+.terminos p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow:0 ;
+}
+
+.botones{
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    padding: 1% 0;
+}
+
+.btn_boton_encriptar{
+    align-items: center;
+    justify-content: center;
+    
+    padding: 2%;
+    width: 25%;
+    gap: 8px;
+
+    background-color: #0A3871;
+    border-radius: 24px;
+    
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+}
+
+.btn_boton_desencriptar{
+    align-items: center;
+    justify-content: center;
+    
+    padding: 2%;
+    width: 25%;
+    gap: 8px;
+
+    background-color: #D8DFE8;
+    border-radius: 24px;
+    
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+}
+
+
+
+.btn_boton_encriptar:hover,
+.btn_boton_desencriptar:hover{
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+}
+
+.encriptado{
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    
+    display: flex;
+    justify-content: center;
+
+    background: #fff;
+    box-shadow: 0px 24px 32 -8px rgba(0,0,0,0.08);
+
+    border-radius: 32px;
+
+}
+
+.mensaje_encriptado{
+    width: 100%;
+
+    position: absolute;
+    top: 65%;
+    padding: 1%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mensaje_encriptado h2 {
+    width: 60%;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343a40;
+}
+
+.mensaje_encriptado p{
+    width: 80%;
+    
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+
+}
+
+.encriptado img {
+    width: 80%;
+    height: 50%; 
+    position: absolute;
+
+    top: 15%;
+  }
+
+  /*responsibe*/
+  @media (max-width: 57.5em){
+    .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .encriptar {
+        width: 100%;
+      }
+      .texto {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+      }
+      .terminos {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+      }
+      .terminos p {
+        font-size: 16px;
+      }
+      .botones {
+        width: 80%;
+        left: 10%;
+        top: 70%;
+      }
+      .btn_boton_encriptar,
+      .btn_boton_desencriptar {
+        width: 48%;
+        border-radius: 16px;
+      }
+      .btn_boton_encriptar:hover,
+      .btn_boton_desencriptar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+      }
+      .encriptado {
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+      }
+      .mensaje_encriptado {
+        width: 100%;
+        top: 5%;
+      }
+      .encriptado img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+      }
+  }
